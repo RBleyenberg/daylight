@@ -25,13 +25,7 @@ const structure: Field[] = [
     name: 'body',
     placeholder: 'Write your article (in markdown)',
     validator: [Validators.required],
-  },
-  {
-    type: 'INPUT',
-    name: 'tagList',
-    placeholder: 'Enter Tags',
-    validator: [],
-  },
+  }
 ];
 
 @Component({

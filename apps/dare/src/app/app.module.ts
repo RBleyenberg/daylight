@@ -26,12 +26,12 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
         {
           path: '',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/home/src/lib/home.module').then(m => m.HomeModule),
+            import('@angular-ngrx-nx-realworld-example-app/article/article-home/src/lib/home.module').then(m => m.HomeModule),
         },
         {
           path: 'article/:slug',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/article/src/lib/article.module').then(m => m.ArticleModule),
+            import('@angular-ngrx-nx-realworld-example-app/article/article-item/src/lib/article.module').then(m => m.ArticleModule),
         },
         {
           path: 'settings',
@@ -43,7 +43,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
         {
           path: 'editor',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/editor/src/lib/editor.module').then(m => m.EditorModule),
+            import('@angular-ngrx-nx-realworld-example-app/article/article-editor/src/lib/editor.module').then(m => m.EditorModule),
         },
         {
           path: 'profile/:username',
