@@ -36,7 +36,9 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
         {
           path: 'settings',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/settings/src/lib/settings.module').then(m => m.SettingsModule),
+            import('@angular-ngrx-nx-realworld-example-app/settings/src/lib/settings.module').then(
+              m => m.SettingsModule,
+            ),
         },
         {
           path: 'editor',
