@@ -5,7 +5,5 @@ import { HomeService } from '../home.service';
 
 @Injectable()
 export class HomeEffects {
- 
   constructor(private actions$: Actions, private homeService: HomeService) {}
-  
 }

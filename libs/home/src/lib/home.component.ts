@@ -16,10 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   isAuthenticated: boolean;
   unsubscribe$: Subject<void> = new Subject();
 
-  constructor(
-    private articleListFacade: ArticleListFacade,
-    private authFacade: AuthFacade,
-  ) {}
+  constructor(private articleListFacade: ArticleListFacade, private authFacade: AuthFacade) {}
 
   ngOnInit() {
     this.authFacade.isLoggedIn$.pipe(takeUntil(this.unsubscribe$)).subscribe(isLoggedIn => {

@@ -5,10 +5,7 @@ import { HomeState } from './home.reducer';
 
 @Injectable()
 export class HomeFacade {
-
   home$ = this.store.select(homeQuery.getHome);
 
   constructor(private store: Store<HomeState>) {}
-
-
 }
