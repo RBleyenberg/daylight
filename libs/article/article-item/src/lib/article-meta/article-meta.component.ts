@@ -4,7 +4,7 @@ import { Article } from '@angular-ngrx-nx-realworld-example-app/api';
 @Component({
   selector: 'app-article-meta',
   templateUrl: './article-meta.component.html',
-  styleUrls: ['./article-meta.component.css'],
+  styleUrls: ['./article-meta.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticleMetaComponent {

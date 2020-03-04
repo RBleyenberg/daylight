@@ -8,7 +8,7 @@ import { LocalStorageJwtService } from '@angular-ngrx-nx-realworld-example-app/a
 @Component({
   selector: 'dare-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {

@@ -1,4 +1,5 @@
-import { Field, NgrxFormsFacade } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { NgrxFormsFacade } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { Field } from './../../../../../ngrx-forms/src/lib/+state/ngrx-forms.interfaces';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { OnDestroy } from '@angular/core';
 import { Validators } from '@angular/forms';
@@ -31,7 +32,7 @@ const structure: Field[] = [
 @Component({
   selector: 'app-article-editor',
   templateUrl: './article-editor.component.html',
-  styleUrls: ['./article-editor.component.css'],
+  styleUrls: ['./article-editor.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticleEditorComponent implements OnInit, OnDestroy {

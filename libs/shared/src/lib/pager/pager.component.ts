@@ -3,7 +3,7 @@ import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectionStrategy
 @Component({
   selector: 'app-pager',
   templateUrl: './pager.component.html',
-  styleUrls: ['./pager.component.css'],
+  styleUrls: ['./pager.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PagerComponent {
