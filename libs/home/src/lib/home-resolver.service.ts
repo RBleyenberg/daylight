@@ -10,7 +10,6 @@ export class HomeResolverService implements Resolve<Home> {
   constructor(private facade: HomeFacade) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
-    this.facade.loadTags();
     return of(true);
   }
 }

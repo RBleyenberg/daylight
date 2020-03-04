@@ -11,7 +11,6 @@ import { homeInitialState, homeReducer } from './+state/home.reducer';
 import { HomeResolverService } from './home-resolver.service';
 import { HomeComponent } from './home.component';
 import { HomeService } from './home.service';
-import { TagsListComponent } from './tags-list/tags-list.component';
 
 @NgModule({
   imports: [
@@ -30,7 +29,7 @@ import { TagsListComponent } from './tags-list/tags-list.component';
     }),
     EffectsModule.forFeature([HomeEffects]),
   ],
-  declarations: [HomeComponent, TagsListComponent],
+  declarations: [HomeComponent],
   providers: [HomeEffects, HomeResolverService, HomeService, HomeFacade],
 })
 export class HomeModule {}

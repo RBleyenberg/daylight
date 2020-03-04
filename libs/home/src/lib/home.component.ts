@@ -4,7 +4,6 @@ import { takeUntil } from 'rxjs/operators';
 import { ArticleListConfig } from '@angular-ngrx-nx-realworld-example-app/article-list';
 import { articleListInitialState, ArticleListFacade } from '@angular-ngrx-nx-realworld-example-app/article-list';
 import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
-import { HomeFacade } from './+state/home.facade';
 
 @Component({
   selector: 'app-home',
@@ -14,12 +13,10 @@ import { HomeFacade } from './+state/home.facade';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   listConfig$: Observable<ArticleListConfig>;
-  tags$: Observable<string[]>;
   isAuthenticated: boolean;
   unsubscribe$: Subject<void> = new Subject();
 
   constructor(
-    private facade: HomeFacade,
     private articleListFacade: ArticleListFacade,
     private authFacade: AuthFacade,
   ) {}
@@ -30,7 +27,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.getArticles();
     });
     this.listConfig$ = this.articleListFacade.listConfig$;
-    this.tags$ = this.facade.tags$;
   }
 
   setListTo(type: string = 'ALL') {
