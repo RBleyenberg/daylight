@@ -12,6 +12,7 @@ import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  
   listConfig$: Observable<ArticleListConfig>;
   isAuthenticated: boolean;
   unsubscribe$: Subject<void> = new Subject();
@@ -40,17 +41,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.setListTo('ALL');
     }
   }
-
-  setListTag(tag: string) {
-    this.articleListFacade.setListConfig(<ArticleListConfig>{
-      ...articleListInitialState.listConfig,
-      filters: {
-        ...articleListInitialState.listConfig.filters,
-        tag,
-      },
-    });
-  }
-
   ngOnDestroy() {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

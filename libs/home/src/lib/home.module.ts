@@ -2,15 +2,8 @@ import { ArticleListModule } from '@angular-ngrx-nx-realworld-example-app/articl
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
 
-import { HomeEffects } from './+state/home.effects';
-import { HomeFacade } from './+state/home.facade';
-import { homeInitialState, homeReducer } from './+state/home.reducer';
-import { HomeResolverService } from './home-resolver.service';
 import { HomeComponent } from './home.component';
-import { HomeService } from './home.service';
 
 @NgModule({
   imports: [
@@ -21,15 +14,11 @@ import { HomeService } from './home.service';
         path: '',
         pathMatch: 'full',
         component: HomeComponent,
-        resolve: { HomeResolverService },
+        resolve: {  },
       },
     ]),
-    StoreModule.forFeature('home', homeReducer, {
-      initialState: homeInitialState,
-    }),
-    EffectsModule.forFeature([HomeEffects]),
   ],
   declarations: [HomeComponent],
-  providers: [HomeEffects, HomeResolverService, HomeService, HomeFacade],
+  providers: [],
 })
 export class HomeModule {}
