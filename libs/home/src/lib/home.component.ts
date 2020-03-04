@@ -12,7 +12,6 @@ import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  
   listConfig$: Observable<ArticleListConfig>;
   isAuthenticated: boolean;
   unsubscribe$: Subject<void> = new Subject();

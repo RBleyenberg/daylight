@@ -16,14 +16,16 @@
                 [ngClass]="{ active: (listConfig$ | async)?.type === 'FEED' }"
                 class="nav-link"
                 (click)="setListTo('FEED')"
-                >Volg User</a>
+                >Volg User</a
+              >
             </li>
             <li class="nav-item">
               <a
                 [ngClass]="{ active: (listConfig$ | async)?.type === 'ALL' && !(listConfig$ | async) }"
                 class="nav-link"
                 (click)="setListTo('ALL')"
-                >Global Feed</a>
+                >Global Feed</a
+              >
             </li>
           </ul>
         </div>
