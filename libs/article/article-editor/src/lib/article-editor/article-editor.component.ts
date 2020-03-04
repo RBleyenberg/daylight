@@ -25,7 +25,7 @@ const structure: Field[] = [
     name: 'body',
     placeholder: 'Write your article (in markdown)',
     validator: [Validators.required],
-  }
+  },
 ];
 
 @Component({

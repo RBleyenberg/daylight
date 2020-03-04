@@ -223,7 +223,10 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/article/article-editor/tsconfig.lib.json", "libs/article/article-editor/tsconfig.spec.json"],
+            "tsConfig": [
+              "libs/article/article-editor/tsconfig.lib.json",
+              "libs/article/article-editor/tsconfig.spec.json"
+            ],
             "exclude": ["**/node_modules/**", "!libs/article/article-editor/**"]
           }
         },
