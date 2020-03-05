@@ -1,4 +1,13 @@
-import { ComponentFactoryResolver, ComponentRef, Directive, Input, OnChanges, OnInit, Type, ViewContainerRef } from '@angular/core';
+import {
+  ComponentFactoryResolver,
+  ComponentRef,
+  Directive,
+  Input,
+  OnChanges,
+  OnInit,
+  Type,
+  ViewContainerRef,
+} from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Field } from '../+state/ngrx-forms.interfaces';
 import { InputComponent } from '../fields/input/input.component';
@@ -17,7 +26,7 @@ export class DynamicFieldDirective implements OnInit, OnChanges {
   @Input() group: FormGroup;
   component: ComponentRef<any>;
 
-  constructor(private resolver: ComponentFactoryResolver, private container: ViewContainerRef) { }
+  constructor(private resolver: ComponentFactoryResolver, private container: ViewContainerRef) {}
 
   ngOnChanges() {
     if (this.component) {
