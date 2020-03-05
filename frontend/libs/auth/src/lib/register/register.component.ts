@@ -8,8 +8,14 @@ import { AuthFacade } from '../+state/auth.facade';
 const structure: Field[] = [
   {
     type: 'INPUT',
-    name: 'email',
+    name: 'username',
     placeholder: 'Username',
+    validator: [Validators.required],
+  },
+  {
+    type: 'INPUT',
+    name: 'email',
+    placeholder: 'Email',
     validator: [Validators.required],
   },
   {
@@ -23,14 +29,13 @@ const structure: Field[] = [
   },
 ];
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class RegisterComponent implements OnInit, OnDestroy {
   structure$: Observable<Field[]>;
   data$: Observable<any>;
 
@@ -47,7 +52,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   submit() {
-    this.facade.login();
+    this.facade.register();
   }
 
   ngOnDestroy() {
