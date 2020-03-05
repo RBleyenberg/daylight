@@ -7,7 +7,7 @@ import { debounceTime, map, takeUntil, tap, filter } from 'rxjs/operators';
 @Component({
   selector: 'app-dynamic-form',
   templateUrl: './dynamic-form.component.html',
-  styleUrls: ['./dynamic-form.component.css'],
+  styleUrls: ['./dynamic-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DynamicFormComponent implements OnInit, OnDestroy {

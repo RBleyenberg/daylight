@@ -1,5 +1,5 @@
 {
-  "npmScope": "conduit",
+  "npmScope": "dare",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -8,11 +8,11 @@
     "nx.json": "*"
   },
   "projects": {
-    "conduit-e2e": {
+    "dare-e2e": {
       "tags": [],
-      "implicitDependencies": ["conduit"]
+      "implicitDependencies": ["dare"]
     },
-    "conduit": {
+    "dare": {
       "tags": []
     },
     "api": {

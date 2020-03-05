@@ -6,7 +6,7 @@ import { NgrxFormsFacade } from '../+state/ngrx-forms.facade';
 @Component({
   selector: 'app-list-errors',
   templateUrl: './list-errors.component.html',
-  styleUrls: ['./list-errors.component.css'],
+  styleUrls: ['./list-errors.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListErrorsComponent implements OnInit, OnDestroy {

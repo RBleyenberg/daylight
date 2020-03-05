@@ -1,12 +1,10 @@
-language: java
-jdk:
-  - openjdk11
-before_install:
-  - chmod +x gradlew
-  - chmod +x gradle/wrapper/gradle-wrapper.jar
-  - chmod +x postman_tests/run-api-tests.sh
-script:
-  - ./gradlew test build
-  - ./gradlew run &
-  - ./postman_tests/run-api-tests.sh
-  - ./gradlew --stop
+language: node_js
+node_js: "8"
+
+sudo: required
+services: mongodb
+
+install: yarn
+
+before_script: yarn start & sleep 5
+script: yarn test
