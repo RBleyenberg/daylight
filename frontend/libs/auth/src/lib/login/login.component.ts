@@ -23,7 +23,6 @@ const structure: Field[] = [
   },
 ];
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
