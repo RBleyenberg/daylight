@@ -1,7 +1,6 @@
-import { ErrorHandler, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-
 import { NgrxErrorEffects } from './+state/ngrx-error.effects';
 import { ngrxErrorReducer, ngrxErrorInitialState } from './+state/ngrx-error.reducer';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
