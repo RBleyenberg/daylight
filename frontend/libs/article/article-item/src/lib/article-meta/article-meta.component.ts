@@ -13,7 +13,7 @@ export class ArticleMetaComponent {
   @Input() canModify: boolean;
   @Output() delete: EventEmitter<string> = new EventEmitter();
 
-   deleteArticle() {
+  deleteArticle() {
     this.delete.emit(this.article.slug);
   }
 }

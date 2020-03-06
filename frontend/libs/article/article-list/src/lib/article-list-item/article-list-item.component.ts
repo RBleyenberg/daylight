@@ -10,6 +10,4 @@ import { Article } from '@angular-ngrx-nx-realworld-example-app/api';
 export class ArticleListItemComponent {
   @Input() article: Article;
   @Output() navigateToArticle: EventEmitter<string> = new EventEmitter();
-
- 
 }

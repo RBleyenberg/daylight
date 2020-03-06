@@ -11,7 +11,6 @@
         {{ article.createdAt | date: 'longDate' }}
       </span>
     </div>
-   
   </div>
   <a (click)="navigateToArticle.emit(article.slug)" class="preview-link">
     <h1>{{ article.title }}</h1>

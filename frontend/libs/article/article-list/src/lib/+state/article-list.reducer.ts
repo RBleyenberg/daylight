@@ -90,7 +90,7 @@ const reducer = createReducer(
       loaded: true,
     };
     return { ...state, articles };
-  })
+  }),
 );
 
 function replaceArticle(articles: Articles, payload: Article): Articles {

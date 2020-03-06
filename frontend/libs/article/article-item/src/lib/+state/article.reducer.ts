@@ -66,7 +66,7 @@ const reducer = createReducer(
   on(ArticleActions.loadCommentsFail, state => ({
     ...state,
     comments: articleInitialState.comments,
-  }))
+  })),
 );
 
 export function articleReducer(state: ArticleState | undefined, action: Action): ArticleState {

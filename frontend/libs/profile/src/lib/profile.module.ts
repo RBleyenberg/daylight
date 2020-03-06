@@ -35,7 +35,7 @@ import { ProfileService } from './profile.service';
             path: '',
             component: ProfileArticlesComponent,
             resolve: { ProfileArticlesResolverService },
-          }         
+          },
         ],
       },
     ]),

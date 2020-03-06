@@ -5,5 +5,4 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class ActionsService {
   constructor(private apiService: ApiService) {}
-
 }
