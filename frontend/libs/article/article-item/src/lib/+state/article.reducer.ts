@@ -45,7 +45,6 @@ const reducer = createReducer(
   })),
   on(ArticleActions.initializeArticle, state => articleInitialState),
   on(ArticleActions.deleteArticleFail, state => articleInitialState),
-  
 );
 
 export function articleReducer(state: ArticleState | undefined, action: Action): ArticleState {

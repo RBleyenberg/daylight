@@ -13,7 +13,6 @@ import { filter, takeUntil } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticleComponent implements OnInit, OnDestroy {
-
   article$: Observable<Article>;
   canModify = false;
   isAuthenticated$: Observable<boolean>;
@@ -34,13 +33,14 @@ export class ArticleComponent implements OnInit, OnDestroy {
     this.currentUser$ = this.auhtFacade.user$;
     this.data$ = this.ngrxFormsFacade.data$;
     this.touchedForm$ = this.ngrxFormsFacade.touched$;
-    this.ngrxFormsFacade.setData('');    
+    this.ngrxFormsFacade.setData('');
     this.auhtFacade.auht$
       .pipe(
         filter(auth => auth.loggedIn),
         auth$ => combineLatest([auth$, this.facade.authorUsername$]),
         takeUntil(this.unsubscribe$),
-      ).subscribe(([auth, username]) => {
+      )
+      .subscribe(([auth, username]) => {
         this.canModify = auth.user.username === username;
       });
   }
@@ -48,7 +48,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
   delete(slug: string) {
     this.facade.delete(slug);
   }
-  
+
   updateForm(changes: any) {
     this.ngrxFormsFacade.updateData(changes);
   }
