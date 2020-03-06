@@ -20,7 +20,6 @@ export interface ArticleListConfig {
 export interface Filters {
   tag?: string;
   author?: string;
-  favorited?: string;
   limit?: number;
   offset?: number;
 }
@@ -91,11 +90,7 @@ const reducer = createReducer(
       loaded: true,
     };
     return { ...state, articles };
-  }),
-  on(ArticleListActions.unFavoriteSuccess, ArticleListActions.favoriteSuccess, (state, action) => ({
-    ...state,
-    articles: replaceArticle(state.articles, action.article),
-  })),
+  })
 );
 
 function replaceArticle(articles: Articles, payload: Article): Articles {

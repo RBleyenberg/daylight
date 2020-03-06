@@ -10,11 +10,4 @@ export class ProfileFacade {
 
   constructor(private store: Store<ProfileState>) {}
 
-  follow(id: string) {
-    this.store.dispatch(ProfileActions.follow({ id }));
-  }
-
-  unfollow(id: string) {
-    this.store.dispatch(ProfileActions.unFollow({ id }));
-  }
 }

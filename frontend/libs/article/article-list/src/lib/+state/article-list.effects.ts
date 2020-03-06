@@ -43,32 +43,6 @@ export class ArticleListEffects {
     ),
   );
 
-  favorite = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleListActions.favorite),
-      map(action => action.slug),
-      concatMap(slug =>
-        this.actionsService.favorite(slug).pipe(
-          map(response => ArticleListActions.favoriteSuccess({ article: response.article })),
-          catchError(error => of(ArticleListActions.favoriteFail(error))),
-        ),
-      ),
-    ),
-  );
-
-  unFavorite = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleListActions.unFavorite),
-      map(action => action.slug),
-      concatMap(slug =>
-        this.actionsService.unfavorite(slug).pipe(
-          map(response => ArticleListActions.unFavoriteSuccess({ article: response.article })),
-          catchError(error => of(ArticleListActions.unFavoriteFail(error))),
-        ),
-      ),
-    ),
-  );
-
   constructor(
     private actions$: Actions,
     private articleListService: ArticleListService,

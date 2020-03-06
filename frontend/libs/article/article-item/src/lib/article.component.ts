@@ -63,18 +63,6 @@ export class ArticleComponent implements OnInit, OnDestroy {
       });
   }
 
-  follow(username: string) {
-    this.facade.follow(username);
-  }
-  unfollow(username: string) {
-    this.facade.unfollow(username);
-  }
-  favorite(slug: string) {
-    this.facade.favorite(slug);
-  }
-  unfavorite(slug: string) {
-    this.facade.unfavorite(slug);
-  }
   delete(slug: string) {
     this.facade.delete(slug);
   }

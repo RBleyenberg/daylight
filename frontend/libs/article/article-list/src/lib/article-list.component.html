@@ -10,7 +10,6 @@
   [hidden]="isLoading$ | async"
   (navigateToArticle)="navigateToArticle($event)"
   (unFavorite)="unFavorite($event)"
-  (favorite)="favorite($event)"
   *ngFor="let article of articles$ | async"
   [article]="article"
 >

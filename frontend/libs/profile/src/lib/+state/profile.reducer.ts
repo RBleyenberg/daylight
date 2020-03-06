@@ -10,7 +10,6 @@ export const profileInitialState: Profile = {
   username: '',
   bio: '',
   image: '',
-  following: false,
   loading: false,
 };
 
@@ -20,8 +19,7 @@ const reducer = createReducer(
   profileInitialState,
   on(ProfileActions.getProfile, (state, action) => ({ ...state, loading: true })),
   on(ProfileActions.getProfileSuccess, (state, action) => ({ ...action.profile, loading: false })),
-  on(ProfileActions.getProfileFail, (state, action) => profileInitialState),
-  on(ProfileActions.followSuccess, ProfileActions.unFollowSuccess, (state, action) => action.profile),
+  on(ProfileActions.getProfileFail, (state, action) => profileInitialState)
 );
 
 export function profileReducer(state: Profile | undefined, action: Action): Profile {

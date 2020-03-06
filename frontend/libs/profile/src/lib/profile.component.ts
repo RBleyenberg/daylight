@@ -17,7 +17,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
   currentUser$: Observable<User>;
   isUser$: Subject<boolean> = new Subject();
   unsubscribe$: Subject<void> = new Subject();
-  following: boolean;
   username: string;
 
   constructor(private facade: ProfileFacade, private authFacade: AuthFacade) {}
@@ -29,20 +28,11 @@ export class ProfileComponent implements OnInit, OnDestroy {
       .pipe(
         tap(([p, u]) => {
           this.username = p.username;
-          this.following = p.following;
         }),
         map(([p, u]) => p.username === u.username),
         takeUntil(this.unsubscribe$),
       )
       .subscribe(isUser => this.isUser$.next(isUser));
-  }
-
-  toggleFollowing() {
-    if (this.following) {
-      this.facade.unfollow(this.username);
-    } else {
-      this.facade.follow(this.username);
-    }
   }
 
   ngOnDestroy() {

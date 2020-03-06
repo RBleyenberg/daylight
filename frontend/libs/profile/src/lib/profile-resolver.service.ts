@@ -49,8 +49,7 @@ export class ProfileFavoritesResolverService implements Resolve<Profile> {
         config: {
           ...articleListInitialState.listConfig,
           filters: {
-            ...articleListInitialState.listConfig.filters,
-            favorited: username,
+            ...articleListInitialState.listConfig.filters
           },
         },
       }),

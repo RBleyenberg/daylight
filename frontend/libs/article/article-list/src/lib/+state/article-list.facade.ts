@@ -21,14 +21,6 @@ export class ArticleListFacade {
 
   constructor(private store: Store<ArticleListState>) {}
 
-  favorite(slug: string) {
-    this.store.dispatch(ArticleListActions.favorite({ slug }));
-  }
-
-  unFavorite(slug: string) {
-    this.store.dispatch(ArticleListActions.unFavorite({ slug }));
-  }
-
   navigateToArticle(slug: string) {
     this.store.dispatch(go({ to: { path: ['/article', slug] } }));
   }

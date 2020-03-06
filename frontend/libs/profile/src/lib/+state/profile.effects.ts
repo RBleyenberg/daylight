@@ -26,32 +26,6 @@ export class ProfileEffects {
     ),
   );
 
-  follow$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ProfileActions.follow),
-      map(action => action.id),
-      concatMap(slug =>
-        this.actionsService.followUser(slug).pipe(
-          map(response => ProfileActions.followSuccess({ profile: response.profile })),
-          catchError(error => of(ProfileActions.followFail({ error }))),
-        ),
-      ),
-    ),
-  );
-
-  unFollow$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ProfileActions.unFollow),
-      map(action => action.id),
-      concatMap(slug =>
-        this.actionsService.unfollowUser(slug).pipe(
-          map(response => ProfileActions.unFollowSuccess({ profile: response.profile })),
-          catchError(error => of(ProfileActions.unFollowFail({ error }))),
-        ),
-      ),
-    ),
-  );
-
   constructor(
     private actions$: Actions,
     private actionsService: ActionsService,

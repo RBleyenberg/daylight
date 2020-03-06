@@ -20,18 +20,6 @@ export class ArticleFacade {
   loadComments(slug: string) {
     this.store.dispatch(ArticleActions.loadComments({ slug }));
   }
-  follow(username: string) {
-    this.store.dispatch(ArticleActions.follow({ username }));
-  }
-  unfollow(username: string) {
-    this.store.dispatch(ArticleActions.unFollow({ username }));
-  }
-  favorite(slug: string) {
-    this.store.dispatch(ArticleActions.favorite({ slug }));
-  }
-  unfavorite(slug: string) {
-    this.store.dispatch(ArticleActions.unFavorite({ slug }));
-  }
   delete(slug: string) {
     this.store.dispatch(ArticleActions.deleteArticle({ slug }));
   }

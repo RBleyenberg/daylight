@@ -27,14 +27,6 @@ export class ArticleListComponent implements OnInit {
     this.isLoading$ = this.facade.isLoading$;
   }
 
-  favorite(slug: string) {
-    this.facade.favorite(slug);
-  }
-
-  unFavorite(slug: string) {
-    this.facade.unFavorite(slug);
-  }
-
   navigateToArticle(slug: string) {
     this.facade.navigateToArticle(slug);
   }

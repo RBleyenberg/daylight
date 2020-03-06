@@ -35,12 +35,7 @@ import { ProfileService } from './profile.service';
             path: '',
             component: ProfileArticlesComponent,
             resolve: { ProfileArticlesResolverService },
-          },
-          {
-            path: 'favorites',
-            component: ProfileArticlesComponent,
-            resolve: { ProfileFavoritesResolverService },
-          },
+          }         
         ],
       },
     ]),

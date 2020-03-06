@@ -20,13 +20,10 @@ export const editorInitialState: Editor = {
     tagList: [],
     createdAt: '',
     updatedAt: '',
-    favorited: false,
-    favoritesCount: 0,
     author: {
       username: '',
       bio: '',
       image: '',
-      following: false,
       loading: false,
     },
   },

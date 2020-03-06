@@ -4,10 +4,6 @@
       <h1>{{ (article$ | async).title }}</h1>
       <app-article-meta
         [article]="article$ | async"
-        (follow)="follow($event)"
-        (unfollow)="unfollow($event)"
-        (favorite)="favorite($event)"
-        (unfavorite)="unfavorite($event)"
         (delete)="delete($event)"
         [canModify]="canModify"
       >
@@ -25,10 +21,6 @@
     <div class="article-actions">
       <app-article-meta
         [article]="article$ | async"
-        (follow)="follow($event)"
-        (unfollow)="unfollow($event)"
-        (favorite)="favorite($event)"
-        (unfavorite)="unfavorite($event)"
         (delete)="delete($event)"
         [canModify]="canModify"
       ></app-article-meta>

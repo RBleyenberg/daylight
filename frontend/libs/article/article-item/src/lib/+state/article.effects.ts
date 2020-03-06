@@ -73,58 +73,6 @@ export class ArticleEffects {
     ),
   );
 
-  follow = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleActions.follow),
-      map(action => action.username),
-      concatMap(username =>
-        this.actionsService.followUser(username).pipe(
-          map(response => ArticleActions.followSuccess({ profile: response.profile })),
-          catchError(error => of(ArticleActions.followFail(error))),
-        ),
-      ),
-    ),
-  );
-
-  unFollow = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleActions.unFollow),
-      map(action => action.username),
-      concatMap(username =>
-        this.actionsService.unfollowUser(username).pipe(
-          map(response => ArticleActions.unFollowSuccess({ profile: response.profile })),
-          catchError(error => of(ArticleActions.unFollowFail(error))),
-        ),
-      ),
-    ),
-  );
-
-  favorite = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleActions.favorite),
-      map(action => action.slug),
-      concatMap(slug =>
-        this.actionsService.favorite(slug).pipe(
-          map(response => ArticleActions.favoriteSuccess({ article: response.article })),
-          catchError(error => of(ArticleActions.favoriteFail(error))),
-        ),
-      ),
-    ),
-  );
-
-  unFavorite = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleActions.unFavorite),
-      map(action => action.slug),
-      concatMap(slug =>
-        this.actionsService.unfavorite(slug).pipe(
-          map(response => ArticleActions.unFavoriteSuccess({ article: response.article })),
-          catchError(error => of(ArticleActions.unFavoriteFail(error))),
-        ),
-      ),
-    ),
-  );
-
   constructor(
     private actions$: Actions,
     private articleService: ArticleService,

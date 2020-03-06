@@ -79,8 +79,6 @@ The example application is a social blogging site (i.e. a Medium.com clone) call
 - CRUD Articles
 - CR\*D Comments on articles (no updating required)
 - GET and display paginated lists of articles
-- Favorite articles
-- Follow other users
 
 **The general page breakdown looks like this:**
 
@@ -98,6 +96,3 @@ The example application is a social blogging site (i.e. a Medium.com clone) call
   - Render markdown from server client side
   - Comments section at bottom of page
   - Delete comment button (only shown to comment's author)
-- Profile page (URL: /#/profile/:username, /#/profile/:username/favorites )
-  - Show basic user info
-  - List of articles populated from author's created articles or author's favorited articles

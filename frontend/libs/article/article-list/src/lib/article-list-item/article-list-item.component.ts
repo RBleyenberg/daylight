@@ -9,15 +9,7 @@ import { Article } from '@angular-ngrx-nx-realworld-example-app/api';
 })
 export class ArticleListItemComponent {
   @Input() article: Article;
-  @Output() favorite: EventEmitter<string> = new EventEmitter();
-  @Output() unFavorite: EventEmitter<string> = new EventEmitter();
   @Output() navigateToArticle: EventEmitter<string> = new EventEmitter();
 
-  toggleFavorite(article: Article) {
-    if (article.favorited) {
-      this.unFavorite.emit(article.slug);
-    } else {
-      this.favorite.emit(article.slug);
-    }
-  }
+ 
 }

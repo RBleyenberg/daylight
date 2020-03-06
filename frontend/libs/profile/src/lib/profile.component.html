@@ -8,19 +8,7 @@
             {{ (profile$ | async)?.username }}
           </h4>
           <p>{{ (profile$ | async)?.bio }}</p>
-          <button
-            [hidden]="isUser$ | async"
-            class="btn btn-sm action-btn"
-            [ngClass]="{
-              'btn-outline-secondary': !(profile$ | async).following,
-              'btn-secondary': (profile$ | async).following
-            }"
-            (click)="toggleFollowing()"
-          >
-            <i class="ion-plus-round"></i>
-            &nbsp; {{ (profile$ | async).following ? 'Unfollow' : 'Follow' }}
-            {{ (profile$ | async).username }}
-          </button>
+         
           <a
             [routerLink]="['/settings']"
             [hidden]="(isUser$ | async) === false"
@@ -47,15 +35,7 @@
                 >My Articles</a
               >
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                [routerLink]="['/profile', (profile$ | async).username, 'favorites']"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                >Favorited Articles</a
-              >
-            </li>
+           
           </ul>
         </div>
 

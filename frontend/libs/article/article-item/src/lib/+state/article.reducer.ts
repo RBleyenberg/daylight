@@ -23,13 +23,10 @@ export const articleInitialState: ArticleState = {
     tagList: [],
     createdAt: '',
     updatedAt: '',
-    favorited: false,
-    favoritesCount: 0,
     author: {
       username: '',
       bio: '',
       image: '',
-      following: false,
       loading: false,
     },
   },
@@ -69,15 +66,7 @@ const reducer = createReducer(
   on(ArticleActions.loadCommentsFail, state => ({
     ...state,
     comments: articleInitialState.comments,
-  })),
-  on(ArticleActions.followSuccess, ArticleActions.unFollowSuccess, (state, action) => {
-    const data: Article = { ...state.data, author: action.profile };
-    return { ...state, data };
-  }),
-  on(ArticleActions.favoriteSuccess, ArticleActions.unFavoriteSuccess, (state, action) => ({
-    ...state,
-    data: action.article,
-  })),
+  }))
 );
 
 export function articleReducer(state: ArticleState | undefined, action: Action): ArticleState {

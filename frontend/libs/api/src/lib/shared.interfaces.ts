@@ -2,7 +2,6 @@ export interface Profile {
   username: string;
   bio: string;
   image: string;
-  following: boolean;
   loading: boolean;
 }
 
@@ -14,8 +13,6 @@ export interface Article {
   tagList: string[];
   createdAt: string;
   updatedAt: string;
-  favorited: boolean;
-  favoritesCount: number;
   author: Profile;
 }
 
