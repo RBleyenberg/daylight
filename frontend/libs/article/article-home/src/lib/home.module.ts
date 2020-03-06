@@ -1,4 +1,4 @@
-import { ArticleListModule } from '@angular-ngrx-nx-realworld-example-app/article-list';
+import { ArticleListModule } from '@dare-libs/article-list';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';

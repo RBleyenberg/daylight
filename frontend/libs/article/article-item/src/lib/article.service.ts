@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiService, SingleArticleResponse } from '@angular-ngrx-nx-realworld-example-app/api';
+import { ApiService, SingleArticleResponse } from '@dare-libs/api';
 
 @Injectable()
 export class ArticleService {

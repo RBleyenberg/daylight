@@ -1,6 +1,6 @@
 import { AuthService } from '../auth.service';
-import { NgrxFormsFacade, setErrors } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
-import * as fromNgrxForms from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { NgrxFormsFacade, setErrors } from '@dare-libs/ngrx-forms';
+import * as fromNgrxForms from '@dare-libs/ngrx-forms';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions, ofType, createEffect } from '@ngrx/effects';

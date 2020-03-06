@@ -16,16 +16,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-ngrx-nx-realworld-example-app/*": ["libs/*"],
+      "@dare-libs/*": ["libs/*"],
       "@default/*": ["apps/dare/src/app/*"],
       "@env/*": ["apps/dare/src/environments/*"],
-      "@angular-ngrx-nx-realworld-example-app/api": ["libs/api/src/index.ts"],
-      "@angular-ngrx-nx-realworld-example-app/article-list": ["libs/article/article-list/src/index.ts"],
-      "@angular-ngrx-nx-realworld-example-app/auth": ["libs/auth/src/index.ts"],
-      "@angular-ngrx-nx-realworld-example-app/ngrx-error": ["libs/ngrx-error/src/index.ts"],
-      "@angular-ngrx-nx-realworld-example-app/ngrx-forms": ["libs/ngrx-forms/src/index.ts"],
-      "@angular-ngrx-nx-realworld-example-app/ngrx-router": ["libs/ngrx-router/src/index.ts"],
-      "@angular-ngrx-nx-realworld-example-app/shared": ["libs/shared/src/index.ts"]
+      "@dare-libs/api": ["libs/api/src/index.ts"],
+      "@dare-libs/article-list": ["libs/article/article-list/src/index.ts"],
+      "@dare-libs/auth": ["libs/auth/src/index.ts"],
+      "@dare-libs/ngrx-error": ["libs/ngrx-error/src/index.ts"],
+      "@dare-libs/ngrx-forms": ["libs/ngrx-forms/src/index.ts"],
+      "@dare-libs/ngrx-router": ["libs/ngrx-router/src/index.ts"],
+      "@dare-libs/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

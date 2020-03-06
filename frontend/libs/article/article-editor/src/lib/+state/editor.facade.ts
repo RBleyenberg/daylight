@@ -1,4 +1,4 @@
-import { Article } from '@angular-ngrx-nx-realworld-example-app/api';
+import { Article } from '@dare-libs/api';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 

@@ -1,6 +1,6 @@
-import { ArticleListModule } from '@angular-ngrx-nx-realworld-example-app/article-list';
-import { AuthGuardService } from '@angular-ngrx-nx-realworld-example-app/auth';
-import { SharedModule } from '@angular-ngrx-nx-realworld-example-app/shared';
+import { ArticleListModule } from '@dare-libs/article-list';
+import { AuthGuardService } from '@dare-libs/auth';
+import { SharedModule } from '@dare-libs/shared';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';

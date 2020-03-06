@@ -1,5 +1,5 @@
-import { AuthGuardService } from '@angular-ngrx-nx-realworld-example-app/auth';
-import { NgrxFormsModule } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { AuthGuardService } from '@dare-libs/auth';
+import { NgrxFormsModule } from '@dare-libs/ngrx-forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiService, User, UserResponse } from '@angular-ngrx-nx-realworld-example-app/api';
-import { UpdateUserRequest } from '@angular-ngrx-nx-realworld-example-app/settings/settings.interfaces';
+import { ApiService, User, UserResponse } from '@dare-libs/api';
+import { UpdateUserRequest } from '@dare-libs/settings/settings.interfaces';
 
 @Injectable()
 export class SettingsService {

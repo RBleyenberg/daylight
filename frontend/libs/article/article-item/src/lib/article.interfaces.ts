@@ -1,1 +1,1 @@
-import { Profile } from '@angular-ngrx-nx-realworld-example-app/api';
+import { Profile } from '@dare-libs/api';

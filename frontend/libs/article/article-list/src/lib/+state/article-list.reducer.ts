@@ -1,4 +1,4 @@
-import { Article } from '@angular-ngrx-nx-realworld-example-app/api';
+import { Article } from '@dare-libs/api';
 import { Action, createReducer, on } from '@ngrx/store';
 import * as ArticleListActions from './article-list.actions';
 

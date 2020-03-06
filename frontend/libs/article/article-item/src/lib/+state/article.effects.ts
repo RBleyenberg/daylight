@@ -1,13 +1,13 @@
 import { ArticleService } from '../article.service';
-import { ActionsService } from '@angular-ngrx-nx-realworld-example-app/shared';
+import { ActionsService } from '@dare-libs/shared';
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, concatMap, exhaustMap, map, mergeMap, withLatestFrom } from 'rxjs/operators';
 import * as ArticleActions from './article.actions';
 
-import { NgrxFormsFacade, setErrors, resetForm } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
-import { go } from '@angular-ngrx-nx-realworld-example-app/ngrx-router';
+import { NgrxFormsFacade, setErrors, resetForm } from '@dare-libs/ngrx-forms';
+import { go } from '@dare-libs/ngrx-router';
 
 @Injectable()
 export class ArticleEffects {

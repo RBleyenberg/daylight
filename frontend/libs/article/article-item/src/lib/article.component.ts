@@ -1,6 +1,6 @@
-import { Article, User } from '@angular-ngrx-nx-realworld-example-app/api';
-import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
-import { NgrxFormsFacade } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { Article, User } from '@dare-libs/api';
+import { AuthFacade } from '@dare-libs/auth';
+import { NgrxFormsFacade } from '@dare-libs/ngrx-forms';
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject, combineLatest } from 'rxjs';
 import { ArticleFacade } from './+state/article.facade';

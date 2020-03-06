@@ -1,8 +1,7 @@
-import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
-import { Field, NgrxFormsFacade } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { AuthFacade } from '@dare-libs/auth';
+import { Field, NgrxFormsFacade } from '@dare-libs/ngrx-forms';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -11,21 +10,9 @@ import { editSettings } from '../+state/settings.actions';
 const structure: Field[] = [
   {
     type: 'INPUT',
-    name: 'image',
-    placeholder: 'URL of profile picture',
-    validator: [],
-  },
-  {
-    type: 'INPUT',
     name: 'username',
     placeholder: 'Your Name',
     validator: [Validators.required],
-  },
-  {
-    type: 'TEXTAREA',
-    name: 'bio',
-    placeholder: 'Short bio about you',
-    validator: [],
   },
   {
     type: 'INPUT',
@@ -54,12 +41,7 @@ export class SettingsComponent implements OnInit {
   structure$: Observable<Field[]>;
   data$: Observable<any>;
 
-  constructor(
-    private store: Store<any>,
-    private router: Router,
-    private authFacade: AuthFacade,
-    private ngrxFormsFacade: NgrxFormsFacade,
-  ) {}
+  constructor(private store: Store<any>, private authFacade: AuthFacade, private ngrxFormsFacade: NgrxFormsFacade) {}
 
   ngOnInit() {
     this.ngrxFormsFacade.setStructure(structure);

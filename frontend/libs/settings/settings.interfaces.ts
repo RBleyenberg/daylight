@@ -1,4 +1,4 @@
-import { User } from '@angular-ngrx-nx-realworld-example-app/api';
+import { User } from '@dare-libs/api';
 
 export interface UpdateUserRequest {
   user: User;

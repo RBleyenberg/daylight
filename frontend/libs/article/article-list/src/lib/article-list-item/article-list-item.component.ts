@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { Article } from '@angular-ngrx-nx-realworld-example-app/api';
+import { Article } from '@dare-libs/api';
 
 @Component({
   selector: 'app-article-list-item',

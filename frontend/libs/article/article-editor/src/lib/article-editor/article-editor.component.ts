@@ -1,4 +1,4 @@
-import { NgrxFormsFacade } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { NgrxFormsFacade } from '@dare-libs/ngrx-forms';
 import { Field } from './../../../../../ngrx-forms/src/lib/+state/ngrx-forms.interfaces';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { OnDestroy } from '@angular/core';

@@ -1,4 +1,4 @@
-import { ApiService, UserResponse } from '@angular-ngrx-nx-realworld-example-app/api';
+import { ApiService, UserResponse } from '@dare-libs/api';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LoginUser, LoginUserRequest, NewUserRequest, NewUser } from './auth.interfaces';

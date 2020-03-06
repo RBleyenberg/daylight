@@ -1,4 +1,4 @@
-import { NgrxFormsModule } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
+import { NgrxFormsModule } from '@dare-libs/ngrx-forms';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';

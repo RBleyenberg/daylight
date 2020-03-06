@@ -1,7 +1,7 @@
-import { ApiModule } from '@angular-ngrx-nx-realworld-example-app/api';
-import { AuthModule } from '@angular-ngrx-nx-realworld-example-app/auth';
-import { NgrxErrorModule } from '@angular-ngrx-nx-realworld-example-app/ngrx-error';
-import { NgrxRouterModule } from '@angular-ngrx-nx-realworld-example-app/ngrx-router';
+import { ApiModule } from '@dare-libs/api';
+import { AuthModule } from '@dare-libs/auth';
+import { NgrxErrorModule } from '@dare-libs/ngrx-error';
+import { NgrxRouterModule } from '@dare-libs/ngrx-router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -26,35 +26,35 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
         {
           path: '',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/article/article-home/src/lib/home.module').then(
+            import('@dare-libs/article/article-home/src/lib/home.module').then(
               m => m.HomeModule,
             ),
         },
         {
           path: 'article/:slug',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/article/article-item/src/lib/article.module').then(
+            import('@dare-libs/article/article-item/src/lib/article.module').then(
               m => m.ArticleModule,
             ),
         },
         {
           path: 'settings',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/settings/src/lib/settings.module').then(
+            import('@dare-libs/settings/src/lib/settings.module').then(
               m => m.SettingsModule,
             ),
         },
         {
           path: 'editor',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/article/article-editor/src/lib/editor.module').then(
+            import('@dare-libs/article/article-editor/src/lib/editor.module').then(
               m => m.EditorModule,
             ),
         },
         {
           path: 'profile/:username',
           loadChildren: () =>
-            import('@angular-ngrx-nx-realworld-example-app/profile/src/lib/profile.module').then(m => m.ProfileModule),
+            import('@dare-libs/profile/src/lib/profile.module').then(m => m.ProfileModule),
         },
       ],
       {

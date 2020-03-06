@@ -1,9 +1,9 @@
 import { Observable, Subject } from 'rxjs';
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { takeUntil } from 'rxjs/operators';
-import { ArticleListConfig } from '@angular-ngrx-nx-realworld-example-app/article-list';
-import { articleListInitialState, ArticleListFacade } from '@angular-ngrx-nx-realworld-example-app/article-list';
-import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
+import { ArticleListConfig } from '@dare-libs/article-list';
+import { articleListInitialState, ArticleListFacade } from '@dare-libs/article-list';
+import { AuthFacade } from '@dare-libs/auth';
 
 @Component({
   selector: 'app-home',

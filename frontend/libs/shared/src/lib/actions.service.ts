@@ -1,4 +1,4 @@
-import { ApiService, ProfileResponse, SingleArticleResponse } from '@angular-ngrx-nx-realworld-example-app/api';
+import { ApiService, ProfileResponse, SingleArticleResponse } from '@dare-libs/api';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 

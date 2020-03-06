@@ -1,9 +1,9 @@
-import { User } from '@angular-ngrx-nx-realworld-example-app/api';
-import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
+import { User } from '@dare-libs/api';
+import { AuthFacade } from '@dare-libs/auth';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { filter, take } from 'rxjs/operators';
-import { LocalStorageJwtService } from '@angular-ngrx-nx-realworld-example-app/auth';
+import { LocalStorageJwtService } from '@dare-libs/auth';
 
 @Component({
   selector: 'dare-root',
@@ -20,12 +20,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.user$ = this.authFacade.user$;
     this.isLoggedIn$ = this.authFacade.isLoggedIn$;
-    this.localStorageJwtService
-      .getItem()
-      .pipe(
+    this.localStorageJwtService.getItem().pipe(
         take(1),
         filter(token => !!token),
-      )
-      .subscribe(token => this.authFacade.user());
+      ).subscribe(token => this.authFacade.user());
   }
 }

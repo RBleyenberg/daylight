@@ -1,6 +1,6 @@
 # ![RealWorld Example App](logo.png)
 
-[![pipeline status](https://gitlab.com/stefanoslig/angular-ngrx-nx-realworld-example-app/badges/master/pipeline.svg)](https://gitlab.com/stefanoslig/angular-ngrx-nx-realworld-example-app/commits/master)
+[![pipeline status](https://gitlab.com/stefanoslig/dare-libs/badges/master/pipeline.svg)](https://gitlab.com/stefanoslig/dare-libs/commits/master)
 
 > ### Angular, ngrx/platform, nrwl/nx codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
