@@ -20,9 +20,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.user$ = this.authFacade.user$;
     this.isLoggedIn$ = this.authFacade.isLoggedIn$;
-    this.localStorageJwtService.getItem().pipe(
+    this.localStorageJwtService
+      .getItem()
+      .pipe(
         take(1),
         filter(token => !!token),
-      ).subscribe(token => this.authFacade.user());
+      )
+      .subscribe(token => this.authFacade.user());
   }
 }

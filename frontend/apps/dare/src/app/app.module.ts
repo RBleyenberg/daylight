@@ -25,36 +25,25 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
       [
         {
           path: '',
-          loadChildren: () =>
-            import('@dare-libs/article/article-home/src/lib/home.module').then(
-              m => m.HomeModule,
-            ),
+          loadChildren: () => import('@dare-libs/article/article-home/src/lib/home.module').then(m => m.HomeModule),
         },
         {
           path: 'article/:slug',
           loadChildren: () =>
-            import('@dare-libs/article/article-item/src/lib/article.module').then(
-              m => m.ArticleModule,
-            ),
+            import('@dare-libs/article/article-item/src/lib/article.module').then(m => m.ArticleModule),
         },
         {
           path: 'settings',
-          loadChildren: () =>
-            import('@dare-libs/settings/src/lib/settings.module').then(
-              m => m.SettingsModule,
-            ),
+          loadChildren: () => import('@dare-libs/settings/src/lib/settings.module').then(m => m.SettingsModule),
         },
         {
           path: 'editor',
           loadChildren: () =>
-            import('@dare-libs/article/article-editor/src/lib/editor.module').then(
-              m => m.EditorModule,
-            ),
+            import('@dare-libs/article/article-editor/src/lib/editor.module').then(m => m.EditorModule),
         },
         {
           path: 'profile/:username',
-          loadChildren: () =>
-            import('@dare-libs/profile/src/lib/profile.module').then(m => m.ProfileModule),
+          loadChildren: () => import('@dare-libs/profile/src/lib/profile.module').then(m => m.ProfileModule),
         },
       ],
       {
