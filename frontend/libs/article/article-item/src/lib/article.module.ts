@@ -9,8 +9,6 @@ import { StoreModule } from '@ngrx/store';
 import { ArticleEffects } from './+state/article.effects';
 import { ArticleFacade } from './+state/article.facade';
 import { articleInitialState, articleReducer } from './+state/article.reducer';
-import { AddCommentComponent } from './add-comment/add-comment.component';
-import { ArticleCommentComponent } from './article-comment/article-comment.component';
 import { ArticleGuardService } from './article-guard.service';
 import { ArticleMetaComponent } from './article-meta/article-meta.component';
 import { ArticleComponent } from './article.component';
@@ -35,6 +33,6 @@ import { MarkdownPipe } from './markdown.pipe';
     SharedModule,
   ],
   providers: [ArticleEffects, ArticleService, ArticleGuardService, ArticleFacade],
-  declarations: [ArticleComponent, ArticleMetaComponent, ArticleCommentComponent, MarkdownPipe, AddCommentComponent],
+  declarations: [ArticleComponent, ArticleMetaComponent, MarkdownPipe],
 })
 export class ArticleModule {}

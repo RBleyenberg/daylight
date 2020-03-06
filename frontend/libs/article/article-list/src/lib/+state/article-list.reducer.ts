@@ -18,7 +18,6 @@ export interface ArticleListConfig {
 }
 
 export interface Filters {
-  tag?: string;
   author?: string;
   limit?: number;
   offset?: number;

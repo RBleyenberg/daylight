@@ -23,18 +23,6 @@ export class ArticleEffects {
     ),
   );
 
-  loadComments = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleActions.loadComments),
-      concatMap(action =>
-        this.articleService.getComments(action.slug).pipe(
-          map(data => ArticleActions.loadCommentsSuccess({ comments: data.comments })),
-          catchError(error => of(ArticleActions.loadCommentsFail(error))),
-        ),
-      ),
-    ),
-  );
-
   deleteArticle = createEffect(() =>
     this.actions$.pipe(
       ofType(ArticleActions.deleteArticle),
@@ -42,32 +30,6 @@ export class ArticleEffects {
         this.articleService.deleteArticle(action.slug).pipe(
           map(_ => go({ to: { path: ['/'] } })),
           catchError(error => of(ArticleActions.deleteArticleFail(error))),
-        ),
-      ),
-    ),
-  );
-
-  addComment = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleActions.addComment),
-      map(action => action.slug),
-      withLatestFrom(this.ngrxFormsFacade.data$, this.ngrxFormsFacade.structure$),
-      exhaustMap(([slug, data, structure]) =>
-        this.articleService.addComment(slug, data.comment).pipe(
-          mergeMap(response => [ArticleActions.addCommentSuccess({ comment: response.comment }), resetForm()]),
-          catchError(result => of(setErrors({ errors: result.error.errors }))),
-        ),
-      ),
-    ),
-  );
-
-  deleteComment = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ArticleActions.deleteComment),
-      concatMap(action =>
-        this.articleService.deleteComment(action.commentId, action.slug).pipe(
-          map(_ => ArticleActions.deleteCommentSuccess({ commentId: action.commentId })),
-          catchError(error => of(ArticleActions.deleteCommentFail(error))),
         ),
       ),
     ),

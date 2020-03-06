@@ -17,13 +17,10 @@ export const editorInitialState: Editor = {
     title: '',
     description: '',
     body: '',
-    tagList: [],
     createdAt: '',
     updatedAt: '',
     author: {
       username: '',
-      bio: '',
-      image: '',
       loading: false,
     },
   },

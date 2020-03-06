@@ -8,8 +8,6 @@ export interface ProfileState {
 
 export const profileInitialState: Profile = {
   username: '',
-  bio: '',
-  image: '',
   loading: false,
 };
 

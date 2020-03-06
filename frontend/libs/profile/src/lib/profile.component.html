@@ -7,8 +7,6 @@
           <h4 [hidden]="(profile$ | async).loading">
             {{ (profile$ | async)?.username }}
           </h4>
-          <p>{{ (profile$ | async)?.bio }}</p>
-
           <a
             [routerLink]="['/settings']"
             [hidden]="(isUser$ | async) === false"
@@ -32,8 +30,7 @@
                 [routerLink]="['/profile', (profile$ | async).username]"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
-                >My Articles</a
-              >
+                >My Articles</a>
             </li>
           </ul>
         </div>

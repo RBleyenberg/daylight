@@ -22,6 +22,6 @@ export class ArticleGuardService implements CanActivate {
     const slug = route.params['slug'];
     this.facade.loadArticle(slug);
 
-    return this.waitForArticleToLoad().pipe(tap(() => this.facade.loadComments(slug)));
+    return this.waitForArticleToLoad();
   }
 }

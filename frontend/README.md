@@ -77,7 +77,6 @@ The example application is a social blogging site (i.e. a Medium.com clone) call
 - Authenticate users via JWT (login/signup pages + logout button on settings page)
 - CRU\* users (sign up & settings page - no deleting required)
 - CRUD Articles
-- CR\*D Comments on articles (no updating required)
 - GET and display paginated lists of articles
 
 **The general page breakdown looks like this:**
@@ -94,5 +93,4 @@ The example application is a social blogging site (i.e. a Medium.com clone) call
 - Article page (URL: /#/article/article-slug-here )
   - Delete article button (only shown to article's author)
   - Render markdown from server client side
-  - Comments section at bottom of page
   - Delete comment button (only shown to comment's author)

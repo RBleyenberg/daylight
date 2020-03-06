@@ -9,4 +9,5 @@ export class ProfileFacade {
   profile$ = this.store.select(getProfile);
 
   constructor(private store: Store<ProfileState>) {}
+
 }

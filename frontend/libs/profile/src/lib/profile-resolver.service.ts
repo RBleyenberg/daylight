@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-
 import { getProfile } from './+state/profile.actions';
 import { Profile } from '@angular-ngrx-nx-realworld-example-app/api';
 

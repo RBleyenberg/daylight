@@ -24,8 +24,6 @@ export const authInitialState: Auth = {
     email: '',
     token: '',
     username: '',
-    bio: '',
-    image: '',
   },
 };
 
